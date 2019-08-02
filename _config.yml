@@ -112,13 +112,13 @@ destination: ./output/
 
 # exclude는 Jekyll컴파일 시 destination에 포함될 필요가
 # 없는것들을 명시한다. (node_modules는 포함시키자)
-exclude:
-  - README.md
-  - Rakefile
-  - Gemfile
-  - Gemfile.lock
-  - changelog.md
-  - "*.Rmd"
-  - vendor
-  - .travis.yml
-  - node_modules
+#exclude:
+#  - README.md
+#  - Rakefile
+#  - Gemfile
+#  - Gemfile.lock
+#  - changelog.md
+#  - "*.Rmd"
+#  - vendor
+ # - .travis.yml
+# - node_modules
