@@ -10,37 +10,29 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-
-# 테마 설정에 대한 부분입니다. 기본 설정을 유지하였습니다.
-theme                  : "minimal-mistakes-jekyll"
-#remote_theme           : "mmistakes/minimal-mistakes"
-
-# 스킨을 설정하는 부분입니다. 
-minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
+# theme                  : "minimal-mistakes-jekyll"
+remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR" # 사이트의 언어 설정을 할 수있습니다.
-# 표시되는 언어의 내용은 _data/ui-text.yml 에서 수정이 가능합니다.
-
-title                    : "Blog of Ikjun son" # 블로그 제목
-title_separator          : "-" # 글 제목 - 블로그 제목  과 같이 사이트를 표시해줍니다.
-name                     : "Ikjun son" # 사이트 소유자의 이름을 사용합니다.(Used to assign a site author.)
-description              : "Ikjun son's personal website." # 사이트에 대한 간단한 설명입니다.
-url                      : "https://son0179.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-# 사이트의 주소를 입력합니다.
-
-baseurl                  : # the subpath of your site, e.g. "/blog"
-# 사이트의 baseurl을 설정해 줍니다.
-
-repository               : "imreplay/blog" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+locale                   : "en-US"
+title                    : "Site Title"
+title_separator          : "-"
+subtitle                 : # site tagline that appears below site title in masthead
+name                     : "Ikjun son"
+description              : "An amazing website."
+url                      : "https://son0179.github.io"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
-words_per_minute         : 200 #read time을 계산하기 위한 분당 읽는 글자수 입니다. 
-comments: # 댓글 설정에 대한부분입니다. 기본적으로 false 로 되어있습니다.
-  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
-  disqus:   #개인적으로 disqus 댓글 모듈을 사용하였습니다.
-    shortname            : imreplay-blog # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+words_per_minute         : 200
+comments:
+  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  disqus:
+    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -48,10 +40,13 @@ comments: # 댓글 설정에 대한부분입니다. 기본적으로 false 로 �
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
+  utterances:
+    theme                : # "github-light" (default), "github-dark"
+    issue_term           : # "pathname" (default)
 staticman:
   allowedFields          : # ['name', 'email', 'url', 'message']
   branch                 : # "master"
-  commitMessage          : # "New comment."
+  commitMessage          : # "New comment by {fields.name}"
   filename               : # comment-{@timestamp}
   format                 : # "yml"
   moderation             : # true
@@ -64,27 +59,24 @@ staticman:
       type               : # "date"
       options:
         format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+  endpoint               : # URL of your own deployment with trailing slash, will fallback to the public instance
 reCaptcha:
   siteKey                :
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-
-#사이트내 검색 설정에 대한 부분입니다.
-search                   : true # true, false (default)
-search_full_content      : true # true, false (default)
-# 저의 경우 algolia 를 사용하고 있으며 추가설정이 필요합니다.
-search_provider          : algolia # lunr (default), algolia, google
+search                   : # true, false (default)
+search_full_content      : # true, false (default)
+search_provider          : # lunr (default), algolia, google
 algolia:
-  application_id         : 237ZENFYNY # YOUR_APPLICATION_ID
-  index_name             : blog # YOUR_INDEX_NAME
-  search_only_api_key    : 5cfd50ded1da95d695708070be40e3b9 # YOUR_SEARCH_ONLY_API_KEY
+  application_id         : # YOUR_APPLICATION_ID
+  index_name             : # YOUR_INDEX_NAME
+  search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : # true (default), false
 google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
-
-# SEO Related 웹마스터 도구 사용을 도와주는 부분입니다.
+# SEO Related
 google_site_verification :
 bing_site_verification   :
 yandex_site_verification :
@@ -94,7 +86,7 @@ naver_site_verification  :
 twitter:
   username               :
 facebook:
-  username               : 
+  username               :
   app_id                 :
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
@@ -105,47 +97,62 @@ social:
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
 
-#구글 애널리틱스에 대한 설정입니다.
 # Analytics
 analytics:
-  provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
+  provider               : false # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : "UA-120523980-2"
+    tracking_id          :
     anonymize_ip         : # true, false (default)
 
-# 사이트 소유자에 대한 정보를 작성합니다.
+
 # Site Author
 author:
-  name             : "Imreplay"
+  name             : "Your Name"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "천천히 굴러가는 개인 공부 블로그"
-  location         : "Republic of Korea"
-  email            : "imreplay@imreplay.xyz"
-  uri              : "https://blog.imreplay.xyz"
-  home             : # null (default), "absolute or relative url to link to author home"
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         : "imreplay08"
-  foursquare       :
-  github           : "imreplay"
-  gitlab           :
-  google_plus      :
-  keybase          :
-  instagram        :
-  lastfm           :
-  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
-  steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
-  tumblr           :
-  twitter          :
-  vine             :
-  weibo            :
-  xing             :
-  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  bio              : "I am an **amazing** person."
+  location         : "Somewhere"
+  email            :
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      # url: mailto:your.name@email.com
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      # url: "https://your-website.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      # url: "https://twitter.com/"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      # url: "https://github.com/"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url: "https://instagram.com/"
+
+# Site Footer
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      # url:
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      # url:
+    - label: "GitLab"
+      icon: "fab fa-fw fa-gitlab"
+      # url:
+    - label: "Bitbucket"
+      icon: "fab fa-fw fa-bitbucket"
+      # url:
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url:
 
 
 # Reading Files
@@ -176,6 +183,8 @@ exclude:
   - Rakefile
   - README
   - tmp
+  - /docs # ignore Minimal Mistakes /docs
+  - /test # ignore Minimal Mistakes /test
 keep_files:
   - .git
   - .svn
@@ -213,17 +222,17 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: "Asia/Seoul" # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-# 플러그인을 정의하는 부분입니다.
+
 # Plugins (previously gems:)
 plugins:
-  - jekyll-algolia
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -232,6 +241,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-include-cache
 
 
 # Archives
@@ -271,9 +281,6 @@ compress_html:
     envs: development
 
 
-# Front Matter 설정입니다.
-# 페이지 본문에 적용되는 기본 설정들을 정의합니다.
-# path 값으로 경로를 설정해 줍니다.
 # Defaults
 defaults:
   # _posts
@@ -284,39 +291,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: # true
       share: true
       related: true
-
-  # 테마에 포함되어 있던 Docs 폴더의 _config.yml을 참고하여 _pages 폴더를 만들고 그 폴더에 대한 출력 방법을 정의 했습니다.
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-
-# Travis-ci 를 사용하기 위해 추가한 부분입니다.
-# Jasper2 테마의 Travis-ci 설정부분을 사용합니다. 
-#
-#build option
-# Settings for builing master branch with travis-ci
-# with jekyll-travis
-
-# Settings for deploy rake task
-# Username and repo of Github repo, e.g.
-# https://github.com/USERNAME/REPO.git
-# username defaults to ENV['GIT_NAME'] used by Travis
-# repo defaults to USERNAME.github.io
-# Branch defaults to "source" for USERNAME.github.io
-# or "master" otherwise
-safe: False
-lsi: False
-username: imreplay # Github Username
-repo: blog # Github repo name
-branch: master # 작업 브랜치를 설정
-relative_source: ../blog/ # 저는 repo 이름으로 설정했습니다.
-destination: ../posts # 빌드시 작업파일이 저장될 경로
-production_url:  https://son0179.github.io # 사이트 URL
-source_url:  https://github.com/son0179 # Github 저장소 URL
