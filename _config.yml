@@ -16,7 +16,7 @@ paginate: 10
 language: 'en-uk'
 # 언어 설정
 
-url: https://son0179.github.io
+url: https://moon9342.github.io
 # Google Search Console에서 사용하는 sitemap.xml 생성시
 # 이 url key값이 존재하지 않으면 sitemap.xml이
 # 정상적으로 생성되지 않는다.
@@ -33,7 +33,7 @@ title: IT Blog
 description: Development & Technical Training
 # blog home에 표시될 blog에 대한 전반적인 설명.
 
-cover: #assets/built/images/blog-cover.png
+cover: assets/built/images/blog-cover.png
 # blog home에 표시될 blog cover image.
 
 logo:
@@ -42,7 +42,7 @@ logo_dark:
 favicon: assets/built/images/favicon.jpg
 # favicon으로 사용할 image
 
-production_url: https://son0179.github.io/
+production_url: https://moon9342.github.io/
 # 최종적으로 blog가 운영될 url
 
 source_url: https://github.com/moon9342/GitHubPageMaker/
@@ -92,8 +92,8 @@ feed:
 safe: False
 lsi: False
 
-username: son0179
-repo: #GitHubPageMaker
+username: moon9342
+repo: GitHubPageMaker
 # username : travis-ci와 연동하는 github의 username
 # repo: travis-ci와 연동하는 github의 repository이름
 # https://github.com/<username>/<repository>
@@ -112,13 +112,13 @@ destination: ./output/
 
 # exclude는 Jekyll컴파일 시 destination에 포함될 필요가
 # 없는것들을 명시한다. (node_modules는 포함시키자)
-#exclude:
-#  - README.md
-#  - Rakefile
-#  - Gemfile
-#  - Gemfile.lock
-#  - changelog.md
-#  - "*.Rmd"
-#  - vendor
- # - .travis.yml
-# - node_modules
+exclude:
+  - README.md
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - changelog.md
+  - "*.Rmd"
+  - vendor
+  - .travis.yml
+  - node_modules
