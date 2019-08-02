@@ -1,6 +1,6 @@
 '''c
-void f(){
-  printf("%s","Hello World");
-}
+    void f(){
+      printf("%s","Hello World");  
+    }
 
 '''
